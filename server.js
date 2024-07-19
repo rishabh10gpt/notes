@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/user');
 const noteRoutes = require('./routes/note');
 
-mongoose.connect('mongodb://localhost:27017/noteapp', {
+mongoose.connect(process.env.MONGO_URL, {
 });
 
 const app = express();
